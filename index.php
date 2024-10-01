@@ -18,8 +18,10 @@ include('includes/navbar.php');
         <p>Book your bus tickets easily with our user-friendly platform. Explore routes, check availability, and make reservations in just a few clicks.</p>
 
         <!-- Call to action buttons -->
-        <a href="pages/booking.php" class="btn btn-primary">Book Now</a>
-        <a href="pages/signup.php" class="btn btn-secondary">Sign Up</a>
+        <div class="cta-buttons">
+            <a href="booking.php" class="btn btn-primary">Book Now</a>
+            <a href="signup.php" class="btn btn-secondary">Sign Up</a>
+        </div>
     </div>
 
     <!-- Add other home page content like offers, popular routes, etc. -->
