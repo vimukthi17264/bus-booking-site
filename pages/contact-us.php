@@ -1,53 +1,50 @@
-<?php
-// Include the header and navbar
-include('../includes/header.php');
-include('../includes/navbar.php');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Bus Booking Service</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="form-container">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or need further information, feel free to get in touch with us using the form below.</p>
-        
-        <form action="contact-process.php" method="POST" class="form">
-            <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
-            <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Enter your message here" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
-        
-        <div class="contact-info">
-            <h3>Our Contact Information</h3>
-            <p><strong>Email:</strong> support@busbookingservice.com</p>
-            <p><strong>Phone:</strong> +1 800-123-4567</p>
-            <p><strong>Address:</strong> 1234 Main St, City, Country</p>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-6">
+            <h1 class="text-2xl font-bold">Contact Us</h1>
         </div>
-    </div>
+    </header>
+
+    <!-- Contact Form -->
+    <section class="py-10 px-6">
+        <div class="container mx-auto bg-white p-8 shadow-md rounded-lg">
+            <h2 class="text-xl font-semibold mb-6">Get in Touch</h2>
+            <form action="submit_contact.php" method="POST">
+                <div class="grid grid-cols-1 gap-6 mb-6">
+                    <div>
+                        <label class="block text-gray-700">Name</label>
+                        <input type="text" name="name" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700">Email</label>
+                        <input type="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700">Message</label>
+                        <textarea name="message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg" required></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-lg font-semibold">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto text-center text-white">
+            <p>&copy; 2024 TravelWheels. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
-
-<?php
-// Include the footer
-include('../includes/footer.php');
-?>
